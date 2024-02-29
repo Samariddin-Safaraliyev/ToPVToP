@@ -1,0 +1,18 @@
+.call_to_action{
+    background: linear-gradient(225deg, #8F47B0 0%, #C3009F 100%);
+    .title_call_to_action{
+        padding: 40px 0 30px 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        color: #FBFBFB;
+        line-height: 140%;
+        @media #{$bigTab}{
+            font-weight: 500;
+            font-size: 19px;
+        }
+    }
+    .slide_action{
+        padding-bottom: 40px;
+    }
+}

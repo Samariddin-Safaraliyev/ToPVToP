@@ -1,0 +1,132 @@
+.security{
+    padding-bottom: 100px;
+    color: #480A39;
+    isolation: isolate;
+    @media #{$bigTab}{
+        padding-bottom: 30px; 
+    }
+    .seceurity_title{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 140%;
+        text-align: center;
+        margin-bottom: 50px;
+        @media #{$bigTab}{
+            font-weight: 500;
+            font-size: 30px;
+        }
+    }
+
+    .advantages_tab{
+        filter: drop-shadow(2px 2px 30px rgba(0, 0, 0, 0.05));
+        ul{
+            padding-left: 10px;
+            --bs-nav-tabs-border-width: none;
+
+            li{
+                flex: 1;
+                button{
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px 10px;
+                    color: #480A39;
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                    text-align: center;
+                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+                    &:hover{
+                        background: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+                        color: #fff;
+                    }         
+                }
+                .active{
+                    background: linear-gradient(90deg, rgba(254, 100, 107, 0.6) 14.78%, rgba(244, 159, 39, 0.6) 100%);
+                }
+            }
+        }
+    }
+
+    .tab-content{
+        .advantages_all{
+            flex: 0 0 50%;
+            border-radius: 0px 0px 10px 10px;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+            @media #{$bigTab}{
+                flex-wrap: wrap;
+                padding: 20px;
+                overflow: hidden;
+            }
+            .all_advan{
+                padding: 80px 0 54px 40px;
+
+                .advantages_title{
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 140%;
+                    margin-bottom: 10px;
+                    color: #480A39;
+                }
+
+                .advantages_text{
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #480A39;
+                    margin-bottom: 10px;
+                }
+
+                .advantages_special{
+                    font-family: 'Rubik';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #480A39;
+                    margin-bottom: 10px;
+                }
+                
+                ul{
+                   li{
+                    margin-top: 10px;
+                    margin-left: 10px;
+                    a{
+                        text-decoration: none;
+                        font-family: 'Rubik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: #480A39;
+                    }
+                   }
+                }
+                @media #{$bigTab}{
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
+            .advantages_images{
+                margin-top: 15px;
+                @media #{$bigTab}{
+                    width: 100%;
+                    text-align: center;
+                    overflow: hidden;
+                }
+                img{
+                    @media #{$bigTab}{
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

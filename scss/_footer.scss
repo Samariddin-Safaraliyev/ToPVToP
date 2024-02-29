@@ -1,0 +1,108 @@
+footer{
+    background: linear-gradient(225deg, #8F47B0 0%, #C3009F 100%);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    .d-flex{
+        padding: 50px 0 0 0;
+        @media #{$bigTab}{
+            padding: 0;
+            flex-direction: column;
+        }
+        .hedaer_logo{
+            padding: 50px 0 0 0;
+            @media #{$bigTab}{
+                padding: 30px 0 10px 0;
+            }
+        }
+        .header_nav{
+            ul{
+                list-style: none;
+                gap: 0 30px;
+    
+                a{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #FBFBFB;
+                    text-decoration: none;
+                    transition: .3s all ease;
+
+                    @media #{$smallLaptop}{
+                        font-size: 14px;
+                    }
+                }
+                @media #{$smallLaptop}{
+                    gap: 0 10px;
+                }
+                @media #{$bigTab}{
+                    gap: 10px 0;
+                }
+            }
+        }
+    
+        .header_action{
+            gap: 0 20px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+    
+            .phone{
+                color: #FBFBFB;
+                text-decoration: none;
+                @media #{$bigTab}{
+                    padding-top: 10px;
+                }
+            }
+    
+            .chat{
+                color: #480A39;
+                border-radius: 10px;
+                background-image: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+                text-decoration: none;
+                padding: 5px 10px;
+                position: relative;
+                @media #{$bigTab}{
+                    display: none;
+                }
+                .inner_btn{
+                   position: relative;
+                   z-index: 1;
+                   display: flex;
+    
+                   span{
+                       display: flex;
+                       gap: 0 10px;
+                       margin-right: 10px;
+                        &::after{
+                            content: '';
+                            display: block;
+                            height: 100%;
+                            width: 1px;
+                            flex: 0 0 auto;
+                            background-image: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+                        }
+                   }
+                }
+    
+                &::after{
+                    content: '';
+                    display: block;
+                    height: calc(100% - 2px);
+                    width: calc(100% - 2px);
+                    border-radius: 10px;
+                    left: 1px;
+                    top: 1px;
+                    position: absolute;
+                }
+            }
+            @media #{$smallLaptop}{
+                gap: 0 10px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .slide_action{
+        padding: 38px 0 50px 0;
+    }
+}

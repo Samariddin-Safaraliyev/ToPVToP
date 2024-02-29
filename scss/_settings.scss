@@ -1,0 +1,157 @@
+*,ul,ol{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rubik';
+    font-size: 16px;
+    line-height: 140%;
+    color: #480A39;
+}
+
+.wrapper{
+    overflow: hidden;
+}
+
+.container{
+    @media #{$bigTab}{
+        max-width: 576px;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.section_title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 140%;
+    color: #2E0556;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.button{
+    background: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+    border-radius: 10px;
+    padding: 20px 37px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    color: #f8f8f8;
+    display: inline-flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 0 20px;
+    border: none;
+
+
+    &:hover{
+        background: linear-gradient(90deg, #F49F27 0%, #FE646B 100%);
+    }
+    &.button_sm{
+        padding: 9px 41px;
+        font-size: 16px;
+        font-weight: 400;
+        @media #{$bigTab}{
+            padding: 15px 70px;
+        }
+    }
+    @media #{$bigTab}{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px;
+    }
+}
+
+.modal{
+    &#order_modal{
+        .modal-dialog{
+            max-width: 722px;
+        }
+        .modal-content{
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+        .modal-body{
+            padding: 0;
+        }
+        .modal_row{
+            padding: 50px;
+            justify-content: space-between;
+            
+            .modal_form{
+                flex: 0 0 auto;
+                width: calc(50% - 25px);
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px 0;
+                    .form_title{
+                        font-weight: 700;
+                        font-size: 26px;
+                        line-height: 30px;
+                        letter-spacing: 0.01em;
+                    }
+                    .input_item{
+                        label{
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 140%;
+                        }
+                        .form-control{
+                            border: none;
+                            height: 40px;
+                            border-bottom: 1px solid rgba(89, 17, 122, 0.2);
+                            border-radius: 0;
+                            padding-left: 0;
+                            &[name=comment]{
+                                height: 64px;
+                                max-height: 64px;
+                                min-height: 64px;
+                            }
+                            &::placeholder{
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 140%;
+                                color: #C6C6C6;
+                                opacity: 0.5;
+                            }
+                            &:focus{
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+                @media #{$bigTab}{
+                    width: 100%;
+                }
+            }
+            .modal_image{
+                flex: 0 0 auto;
+                width: calc(50% - 25px);
+                background-image: url(../images/modal_image.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 15px;
+                @media #{$bigTab}{
+                    min-height: 275px;
+                    width: 100%;
+                    background-image: url(../images/modal_image2.png);
+                }
+            }
+            @media #{$bigTab}{
+                flex-direction: column-reverse;
+                gap: 10px 0;
+            }
+        }
+    }
+}
+.modal-backdrop{
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+    opacity: 1 !important;
+}

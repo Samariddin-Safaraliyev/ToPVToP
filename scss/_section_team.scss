@@ -1,0 +1,14 @@
+.team{
+    background: radial-gradient(51.7% 51.7% at 50% 48.3%, rgba(239, 239, 239, 0.8) 0%, rgba(89, 17, 122, 0.05) 100%);
+    padding: 100px 0 100px 0;
+    @media #{$bigTab}{
+        padding: 0;
+    }
+    .section_title{
+        @media #{$bigTab}{
+            font-weight: 500;
+            font-size: 30px;
+        }
+    }
+    
+}

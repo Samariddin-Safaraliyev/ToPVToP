@@ -1,0 +1,174 @@
+header{
+    padding: 10px 0;
+
+    .header_logo{
+        @media #{$bigTab}{
+            display: flex;
+            align-items: center;
+            gap: 0 40px;
+        }
+    }
+
+    .mobile_hamburger{
+        display: none;
+        @media #{$bigTab}{
+            display: block;
+            position: relative;
+            span{
+                display: block;
+                height: 4px;
+                width: 25px;
+                background-image: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+                position: absolute;
+                left: 0;
+                top: 0;
+                transition: .3s all ease;
+                &:nth-child(1){
+                    top: -9px;
+                }
+                &:nth-child(3){
+                    top: 9px;
+                }
+            }
+            &.active{
+                span{
+                    &:nth-child(1){
+                        transform: rotate(45deg);
+                        top: 0;
+                    }
+                    &:nth-child(2){
+                        width: 0;
+                    }
+                    &:nth-child(3){
+                        top: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .header_nav{
+        ul{
+            list-style: none;
+            gap: 0 30px;
+
+            a{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+                color: #480A39;
+                text-decoration: none;
+                transition: .3s all ease;
+
+                &:hover{
+                    color: #D000AC;
+                }
+                @media #{$smallLaptop}{
+                    font-size: 14px;
+                }
+            }
+            @media #{$smallLaptop}{
+                gap: 0 10px;
+            }
+        }
+        @media #{$bigTab}{
+            position: fixed;
+            display: block;
+            right: -100%;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: 100;
+            background-color: transparent;
+            backdrop-filter: blur(12px);
+            padding: 20px;
+            background-color: rgb(255,255,255,.3);
+            transition: .3s all ease;
+            ul{
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+            &.show{
+                right: -35%;
+            }
+        }
+        .menu_close{
+            display: none;
+            @media #{$bigTab}{
+                display: block;
+                position: absolute;
+                right: 30px;
+                top: 10px;
+                text-decoration: none;
+                font-size: 30px;
+                color: #333;
+            }
+        }
+    }
+
+    .header_action{
+        gap: 0 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+
+        .phone{
+            color: #480A39;
+            text-decoration: none;
+            @media #{$bigTab}{
+                display: none;
+            }
+        }
+
+        .chat{
+            color: #480A39;
+            border-radius: 10px;
+            background-image: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+            text-decoration: none;
+            padding: 5px 10px;
+            position: relative;
+            .inner_btn{
+               position: relative;
+               z-index: 1;
+               display: flex;
+
+               span{
+                   display: flex;
+                   gap: 0 10px;
+                   margin-right: 10px;
+                    &::after{
+                        content: '';
+                        display: block;
+                        height: 100%;
+                        width: 1px;
+                        flex: 0 0 auto;
+                        background-image: linear-gradient(90deg, #FE646B 0%, #F49F27 100%);
+                    }
+                    @media #{$bigTab}{
+                        font-size: 11px;
+                    }
+               }
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                height: calc(100% - 2px);
+                width: calc(100% - 2px);
+                background-color: #fff;
+                border-radius: 10px;
+                left: 1px;
+                top: 1px;
+                position: absolute;
+            }
+            @media #{$bigTab}{
+                padding: 9px 10px;
+            }
+        }
+        @media #{$smallLaptop}{
+            gap: 0 10px;
+            font-size: 14px;
+        }
+    }
+}

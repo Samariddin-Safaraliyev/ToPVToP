@@ -1,0 +1,92 @@
+.steps{
+    background: linear-gradient(180deg, #FCFCFC 0%, rgba(255, 255, 255, 0) 100%);
+    margin-bottom: 50px;
+    .title{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 42px;
+        margin-bottom: 50px;
+        line-height: 140%;
+        @media #{$bigTab}{
+            font-size: 25px;
+        }
+    }
+    .row{
+        .accordion{
+            .accordion-item{
+                box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                margin-bottom: 20px;
+                #accordion_1{
+                    height: 100%;
+                    .accordion-body{
+                        height: 98px;
+                        @media #{$bigTab}{
+                            height: 143px;
+                        }
+                    }
+                }
+                #accordion_2{
+                    height: 100%;
+                    .accordion-body{
+                        height: 98px;
+                        @media #{$bigTab}{
+                            height: 143px;
+                        }
+                    }
+                }
+                #accordion_3{
+                    height: 100%;
+                    .accordion-body{
+                        height: 98px;
+                        @media #{$bigTab}{
+                            height: 143px;
+                        }
+                    }
+                }
+                #accordion_4{
+                    .accordion-body{
+                        height: 98px;
+                        @media #{$bigTab}{
+                            height: 143px;
+                        }
+                    }
+                }
+                .title_accordion{
+                    font-weight: 500;
+                    font-size: 24px;
+                    background: linear-gradient(225deg, #5A127B 0%, #D000AC 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding: 20px 0 10px 30px;
+                }
+                .accordion-button{
+                    padding: 20px 0 10px 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    &:focus{
+                        box-shadow: none;
+                    }
+                    &:not(.collapsed){
+                        background-color: #fff;
+                        box-shadow: none;
+                        border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+                    }
+                    &::after{
+                        margin-right: 30px;
+                        background-image: url(../images/arrow.png);
+                    }
+                }
+
+                .accordion-body{
+                    font-style: normal;
+                    font-weight: 400;
+                    color: #480A39;
+                    opacity: 0.6;
+                    margin-left: 9px;
+                    max-height: 100%;
+                }
+            }   
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.opportunities{
+    // background-color: #000000;
+    background: linear-gradient(190.72deg, rgba(255, 243, 253, 0.8) 7.96%, rgba(252, 252, 252, 0.95) 92.04%);
+    padding: 30px 0;
+
+    .row{
+        .title_all{
+            margin-bottom: 10px;
+            .voz{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 140%;
+                @media #{$bigTab}{
+                    font-size: 17px;
+                }
+            }
+    
+            .title_two{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+                gap: 0 61px;
+                color: #000000;
+                margin-right: 25px;
+                @media #{$bigTab}{
+                    gap: 0 4px;
+                    margin-right: 0;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .input_box{
+            margin-bottom: 50px;
+            .input_item{
+                padding: 20px 20px;
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+                filter: drop-shadow(2px 2px 30px rgba(0, 0, 0, 0.05));
+                cursor: pointer;
+                .box_in{
+                    gap: 0 10px;
+                    .numb{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: #999999;
+                    }
+                    .input_title{
+                        font-style: normal;
+                        font-weight: 400;
+                        color: #2E0556;
+                        @media #{$bigTab}{
+                            font-size: 13px;
+                        }
+                    }
+                }
+                .check{
+                    gap: 0 129px;
+                    .check_box_2{
+                        margin-right: 28px;
+                    }
+                    @media #{$bigTab}{
+                        gap: 0 27px;
+                    }
+                }
+
+                &:hover{
+                    background: linear-gradient(90deg, rgba(254, 100, 107, 0.6) 14.78%, rgba(244, 159, 39, 0.6) 100%);
+                }
+            }
+        }
+
+        .slide_action{
+            margin-bottom: 100px;
+            @media #{$bigTab}{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
